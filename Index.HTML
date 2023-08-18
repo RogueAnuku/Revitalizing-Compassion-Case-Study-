@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Smooth scroll and mobile navigation toggle scripts
+      // ... (Your existing scripts)
+    });
+  </script>
+
+  <style>
+    
+  /* Existing styles */
+
+  @media (max-width: 320px) {
+    
+    .mobile-nav-content .logo {
+        width: 40px; /* Adjust the desired width */
+        margin-right: 5px; /* Adjust the desired margin */
+      }
+
+    /* Your existing styles */
+    body {
+      font-family: 'Mulish', sans-serif;
+      background-color: black;
+    }
+
+    .custom-navbar .navbar-nav {
+      display: flex;
+      align-items: center;
+      margin-right: -15px;
+    }
+
+    .custom-navbar .navbar-nav .nav-item {
+      margin: 0;
+    }
+
+    .custom-navbar .navbar-nav .nav-link {
+      padding: 0.5rem 1rem;
+      white-space: nowrap;
+    }
+
+    /* Adjust alignment of logo and name */
+   
+
+    .name {
+      color: #F23580;
+      font: 1rem sans-serif;
+    }
+  }
+    @media (max-width: 768px)
+        
+    {
+      .logo.img-fluid {
+  max-width: 150px; /* Adjust the width as needed */
+}
+      body {
+        background-color: black;
+      }
+
+
+      .col-md-6-px-0 video{
+        width: 100%;
+      }
+
+      .mobile-nav-content .name {
+        font-size: 1.2rem; /* Adjust the desired font size */
+        margin-right: 10px; /* Adjust the desired margin */
+      }
+
+      .mobile-nav-content .navbar-toggler {
+        flex: 1;
+      }
+
+      .mobile-nav-content .navbar-toggler-icon {
+        width: auto;
+      }
+  
+    .zoom-on-hover {
+    transition: transform 0.3s; /* Apply transition to the transform property */
+  }
+  
+
+  /* Add hover effect for zooming in */
+  .zoom-on-hover:hover {
+    transform: scale(1.05); /* Scale up by 5% */
+  }
+  @media (max-width: 1024px){
+    .navigation-links .nav-link {
+    display: inline-block;
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 2rem;
+    box-sizing: border-box;
+}
+.custom-navbar .navbar-nav .nav-link {
+    padding: 0.5rem 2rem;
+    white-space: nowrap;
+}
+ body { background-color: black;}
+  }
+  }
+   </style>
+</head>
+<body>
+  <div class="container-fluid p-0">
+    <!-- Main Navigation Bar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+      <div class="logo-container d-lg-flex align-items-center">
+        <img style="width: 100px;" src="./Logo.gif" class="logo img-fluid" alt="Logo">
+
+        <p class="name">Anika McPhee</p>
+      </div>
+      <button class="navbar-toggler" id="mobile-nav-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <img class="navbar-toggler-icon" src="./menu.png" alt="Menu Icon">
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto navigation-links">
+          <li class="nav-item">
+            <a class="nav-link" href="#home-section">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#project-section">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about-section">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#resume-section">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-section">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <footer class="footer">
+        <ul class="footer-navigation">
+          <li><a href="#top-section">Home</a></li> <!-- Update the "Home" link with the ID of the top section -->
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about-section">About</a></li>
+          <li><a href="#resume-section">Resume</a></li>
+          <li><a href="#contact-section">Contact</a></li>
+        </ul>
+        <div style="margin-left: 50%; margin-top: -8%;">
+          <a href="https://github.com/RogueAnuku" target="_blank" rel="noopener noreferrer">
+            <img src="./github.png" alt="GitHub">
+          </a>
+          <a href="https://www.linkedin.com/in/anika-mcphee" target="_blank" rel="noopener noreferrer">
+            <img src="./linkedin.png" alt="LinkedIn">
+          </a>
+        </div>
+          <div style="margin-left: 85%">
+            <p>©2023 by Anika McPhee</p>
+          </div>
+            <div class="footer-logo">
+              <img src="./IconOnly_Transparent_NoBuffer.png" alt="Footer Logo">
+            </div>
+          </footer>          
+        </body>
+    
+        <script>
+          $(document).ready(function() {
+            // Smooth scroll to sections when navigation links are clicked
+            $(".navbar-nav a").on("click", function(e) {
+              e.preventDefault();
+              var target = $(this).attr("href");
+              $("html, body").animate({ scrollTop: $(target).offset().top }, "slow");
+            });
+    
+            $(".arrow-image").on("click", function() {
+              $("html, body").animate({ scrollTop: 0 }, "slow");
+            });
+          });
+        </script>
+    
+        <script>
+          // JavaScript function to handle mobile navigation toggle
+          document.addEventListener("DOMContentLoaded", function () {
+            const mobileNavToggler = document.getElementById("mobile-nav-toggler");
+            const navMenu = document.getElementById("navbarSupportedContent");
+    
+            mobileNavToggler.addEventListener("click", function () {
+              navMenu.classList.toggle("show");
+            });
+          });
+        </script>
+        
